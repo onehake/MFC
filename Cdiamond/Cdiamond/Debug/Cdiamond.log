@@ -1,0 +1,35 @@
+﻿生成启动时间为 2016/9/9 22:54:19。
+     1>项目“G:\hakec++\MFC\Cdiamond\Cdiamond\Cdiamond.vcxproj”在节点 2 上(Build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\Cdiamond.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Cdiamond.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt CdiamondView.cpp
+         CdiamondView.cpp
+     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(62): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(63): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(64): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(93): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+       ResourceCompile:
+         所有输出均为最新。
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\hakec++\MFC\Cdiamond\Debug\Cdiamond.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"G:\hakec++\MFC\Cdiamond\Debug\Cdiamond.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\hakec++\MFC\Cdiamond\Debug\Cdiamond.lib" /MACHINE:X86 Debug\Cdiamond.res
+         Debug\Cdiamond.obj
+         Debug\CdiamondDoc.obj
+         Debug\CdiamondView.obj
+         Debug\ClassView.obj
+         Debug\FileView.obj
+         Debug\MainFrm.obj
+         Debug\OutputWnd.obj
+         Debug\PropertiesWnd.obj
+         Debug\stdafx.obj
+         Debug\ViewTree.obj
+         Cdiamond.vcxproj -> G:\hakec++\MFC\Cdiamond\Debug\Cdiamond.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\Cdiamond.unsuccessfulbuild”。
+         正在对“Debug\Cdiamond.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“G:\hakec++\MFC\Cdiamond\Cdiamond\Cdiamond.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.50
