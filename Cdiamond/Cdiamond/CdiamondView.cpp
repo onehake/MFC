@@ -17,7 +17,7 @@
 #define new DEBUG_NEW
 #endif
 
-#define MAX 3
+#define MAX 29
 #define PI 3.1415926
 // CCdiamondView
 
@@ -87,16 +87,15 @@ void CCdiamondView::OnDraw(CDC* pDC)
 	pDC->SetViewportOrg(rect.Width()/2,rect.Height()/2);//设置客户区中心为坐标系原点
 	rect.OffsetRect(-rect.Width()/2,-rect.Height()/2);//客户区矩形较正
 	//int i=360/(MAX*2);
-
-	while (int j=1)
+	static int j=10;
+	while (j)
 	{	
+		
 		Cdiamond(pDC,200,60*j);
-		j++;
-		RedrawWindow();
-		j++;
-		//InvalidateRect(NULL);
-			
-	//	Cdiamond(pDC,200,2*i);
+		Sleep(300);
+		pDC->Rectangle(-2000,2000,2000,-2000);
+		j=j+10;
+	//	RedrawWindow();
 
 	}
 
