@@ -13,11 +13,13 @@
 #include "CdiamondView.h"
 
 #include<math.h>
+#include<time.h>
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
-#define MAX 29
+#define MAX 30
+#define MIN 29
 #define PI 3.1415926
 // CCdiamondView
 
@@ -53,16 +55,22 @@ BOOL CCdiamondView::PreCreateWindow(CREATESTRUCT& cs)
 }
 
 // CCdiamondView 绘制
-
-void CCdiamondView::Cdiamond(CDC* pDC, float radious,float angle)//radious 半径
+void CCdiamondView::CCenter(CRect rect,CDC* pDC, float radious,float angle,CPoint p[] )//生成点
 {
-	CPoint p[MAX];
+	srand(time(0));
+	int x=rand()%rect.Width();
+	int y=rand()%rect.Height();
+
 	for (int i=0;i<MAX;i++)
 	{
 		float s=((360/MAX)*(i+1)+angle)*(PI/180);
-		p[i].x=radious*cos(s);
-		p[i].y=radious*sin(s);
+		p[i].x=radious*cos(s)+x;
+		p[i].y=radious*sin(s)+y;
 	}
+}
+
+void CCdiamondView::Cdiamond(CDC* pDC,CPoint p[])//绘制
+{
 	for (int i=0;i<MAX-1;i++)
 	{
 		for (int j=i+1;j<MAX;j++)
@@ -72,6 +80,20 @@ void CCdiamondView::Cdiamond(CDC* pDC, float radious,float angle)//radious 半径
 		}
 	}
 	
+}
+
+int CCdiamondView::in(CPoint p1[],CPoint p2[])//两圆相交？
+{
+	
+		for (int i=0;i<MAX;i++)
+		{
+			for (int j=0;j<MIN;j++)
+			{
+				if (p1[i].x<=p2[j].x&&p1[i].y<=p2[j].y)
+					return 0;
+			}
+		}
+		return 1;
 }
 
 void CCdiamondView::OnDraw(CDC* pDC)
@@ -86,17 +108,27 @@ void CCdiamondView::OnDraw(CDC* pDC)
 	pDC->SetViewportExt(rect.Width(),-rect.Height());//设置视区：x轴水平方向为正，y轴垂直向上方向为正
 	pDC->SetViewportOrg(rect.Width()/2,rect.Height()/2);//设置客户区中心为坐标系原点
 	rect.OffsetRect(-rect.Width()/2,-rect.Height()/2);//客户区矩形较正
-	//int i=360/(MAX*2);
+
+	CPoint p1[MAX],p2[MIN];
+	
+	do{
+		CCenter(rect,pDC,200,0,p1);
+		CCenter(rect,pDC,200,0,p2);
+	}while (in(p1,p2)==0);
+
 	static int j=10;
-	while (j)
+	//while (j)
 	{	
-		
-		Cdiamond(pDC,200,60*j);
+
+		Cdiamond(pDC,p1);
+		Cdiamond(pDC,p2);
+
+	/*	Cdiamond(pDC,200,60*j);
 		Sleep(300);
 		pDC->Rectangle(-2000,2000,2000,-2000);
 		j=j+10;
 	//	RedrawWindow();
-
+	*/
 	}
 
 	if (!pDoc)

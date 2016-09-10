@@ -1,4 +1,4 @@
-﻿生成启动时间为 2016/9/9 23:35:08。
+﻿生成启动时间为 2016/9/10 10:54:21。
      1>项目“G:\hakec++\MFC\Cdiamond\Cdiamond\Cdiamond.vcxproj”在节点 2 上(Build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\Cdiamond.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
@@ -6,10 +6,10 @@
          所有输出均为最新。
          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Cdiamond.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt CdiamondView.cpp
          CdiamondView.cpp
-     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(62): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(63): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
-     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(64): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
-     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(94): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(60): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(66): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(67): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>g:\hakec++\mfc\cdiamond\cdiamond\cdiamondview.cpp(68): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
        ResourceCompile:
          所有输出均为最新。
        Link:
@@ -32,4 +32,4 @@
 
 生成成功。
 
-已用时间 00:00:00.50
+已用时间 00:00:00.54

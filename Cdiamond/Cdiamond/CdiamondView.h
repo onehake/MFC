@@ -27,8 +27,9 @@ protected:
 	virtual void OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo);
 	virtual void OnEndPrinting(CDC* pDC, CPrintInfo* pInfo);
 	
-	virtual void Cdiamond(CDC* pDC, float radious,float angle);//绘制金钢石函数
-
+	virtual void Cdiamond(CDC* pDC,CPoint p[]);//绘制金钢石函数
+	virtual void CCenter(CRect rect,CDC* pDC, float radious,float angle,CPoint p[]);
+	virtual int in(CPoint p1[],CPoint p2[]);
 // 实现
 public:
 	virtual ~CCdiamondView();
